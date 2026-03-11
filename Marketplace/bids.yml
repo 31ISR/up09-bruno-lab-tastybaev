@@ -1,0 +1,38 @@
+info:
+  name: bids
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/api/items/:id/bids"
+  params:
+    - name: id
+      value: "1769028676229"
+      type: path
+  body:
+    type: json
+    data: |-
+      [
+        {
+          "id": 1,
+          "amount": 55000,
+          "userId": 2,
+          "username": "buyer1",
+          "createdAt": "2025-10-07T17:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "amount": 52000,
+          "userId": 3,
+          "username": "buyer2",
+          "createdAt": "2025-10-07T16:55:00.000Z"
+        }
+      ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
