@@ -1,0 +1,33 @@
+info:
+  name: items
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/api/items"
+  body:
+    type: json
+    data: |-
+      [
+        {
+          "id": 1,
+          "title": "Ноутбук Dell",
+          "description": "Игровой ноутбук в отличном состоянии",
+          "price": 50000,
+          "userId": 1,
+          "username": "testuser",
+          "status": "active",
+          "imageUrl": "https://example.com/laptop.jpg",
+          "createdAt": "2025-10-07T16:45:52.058Z",
+          "highestBid": 55000,
+          "bidCount": 3
+        }
+      ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

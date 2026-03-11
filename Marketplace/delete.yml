@@ -1,0 +1,25 @@
+info:
+  name: delete
+  type: http
+  seq: 8
+
+http:
+  method: DELETE
+  url: "{{base_url}}/api/items/:id"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3NjI0MTUwNTc2MTQsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJpYXQiOjE3NzMyMDI5MjUsImV4cCI6MTc3MzI4OTMyNX0.5-vGNkFuncElnkD6iV0lulSpSV02E6ONBqOZ2Oa5fA0
+  params:
+    - name: id
+      value: "1773202965280"
+      type: path
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
